@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button {
+            position: absolute;
+            margin-top: 0.1%;
+            margin-left: -17.5%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green */
+}
+        body{
+            background-color: rgb(4, 213, 241);
+        }
+    
+        .header{
+            position: absolute;
+            font-weight: bold;
+            margin-left: 35%;
+            color: rgb(255, 0, 13);
+            
+        }
+        .bot{
+            position: absolute;
+            margin-left:30%;
+            margin-top: 10%;
+            
+        }
+        #message-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    transition: border-color 0.3s ease;
+}
+
+#message-input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue color for focus state */
+}
+    </style>
+    <div class="header">
+        <h1>
+            Supply Chain Management
+        </h1>
+    </div>
+    
+    <div class="bot" style="font-size:larger;font-weight: 1000;">
+        <div id="chat-container">
+            {% for message in chat_messages %}
+                <p><strong>{{ message.user }}:</strong> {{ message.message }}</p>
+            {% endfor %}
+        </div>
+        <form id="message-form">
+            <input type="text" id="message-input">
+            <button type="submit">Send</button>
+        </form>
+        
+    
+    </div>
+    <script>
+        document.getElementById('message-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const messageInput = document.getElementById('message-input').value;
+            document.getElementById('chat-container').innerHTML += '<p><strong>User:</strong> ' + messageInput + '</p>';
+            fetch('', {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'message': messageInput,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                }),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Remove newline characters from the bot's response
+                const botResponse = data.response.replace(/\n/g, '');
+                document.getElementById('chat-container').innerHTML += '<p><strong>Bot:</strong> ' + botResponse + '</p>';
+            });
+            document.getElementById('message-input').value = '';
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>

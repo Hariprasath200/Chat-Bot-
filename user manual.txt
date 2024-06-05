@@ -1,0 +1,59 @@
+1) revenue generated from haircare products
+Answer: The total revenue generated from haircare products is $40,919.39.
+
+2) highest average price per unit
+answer: the cosmetics category has the highest average price per unit ($59.68).
+
+3) how many units of sku94 (cosmetics) were sold
+answer: 987 units of sku94 were sold.
+
+4) what is the top revenue generating supplier
+answer: supplier 3 is the top revenue generating supplier with $20,726.96 in revenue.
+
+5) which carrier was used the most
+answer: carrier b was used the most in 13 transactions.
+
+6) what is the average shipping cost per transaction
+answer: the average shipping cost per transaction is $59.34.
+
+7) how many transactions used the rail shipping mode
+answer: 11 transactions used the rail shipping mode.
+
+8) what is the total sales revenue from skincare products
+answer: the total sales revenue from skincare products is $33,594.04.
+
+9) which product category has the highest quantity available
+answer: haircare products have the highest quantity available.
+
+10) what is the average lead time for shipping
+answer: the average lead time for shipping is 16.66 days.
+
+11) how many transactions had a stock status of pending
+answer: there were 8 transactions with a stock status of pending.
+
+12) which shipping route was used the most
+answer: route b was used the most in 11 transactions.
+
+13) what is the total revenue generated from cosmetics products
+answer: the total revenue generated from cosmetics products is $43,693.79.
+
+14) how many units of sku99 (haircare) were sold
+answer: 627 units of sku99 were sold.
+
+15) which customer gender made the most purchases
+answer: non-binary customers made the most purchases.
+
+16) what is the average discount percentage per transaction
+answer: the average discount percentage per transaction is calculated by adding up all the discount percentages and dividing by the total number of transactions.
+
+17) what is the total revenue generated from male customers
+answer: the total revenue generated from male customers can be calculated by summing up the revenue from transactions where the customer gender is male.
+
+18) which supplier had the highest average customer rating
+answer: calculate the average customer rating for each supplier and identify the one with the highest average.
+
+19) what is the total revenue generated from transactions with a stock status of pass
+answer: sum up the revenue from transactions where the stock status is pass.
+
+20) how many transactions had a stock status of fail and used carrier b for shipping
+answer: count the number of transactions where the stock status is "fail" and the carrier used is carrier b.
